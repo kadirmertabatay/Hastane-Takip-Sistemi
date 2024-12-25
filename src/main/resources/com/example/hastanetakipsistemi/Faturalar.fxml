@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1057.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hastanetakipsistemi.FaturaController">
+    <children>
+        <AnchorPane prefHeight="599.0" prefWidth="230.0" style="-fx-background-color: #1442FC;">
+            <children>
+                <ImageView fitHeight="198.0" fitWidth="230.0">
+                    <image>
+                        <Image url="@giris_reism.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="1.0" layoutY="274.0" text="Hastane" textFill="WHITE">
+                    <font>
+                        <Font size="38.0" />
+                    </font>
+                </Label>
+                <Label layoutX="14.0" layoutY="337.0" prefHeight="55.0" prefWidth="214.0" text="TakipSistemi" textFill="WHITE">
+                    <font>
+                        <Font size="38.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Label layoutX="287.0" layoutY="29.0" prefHeight="55.0" prefWidth="179.0" text="Faturalar" textFill="#1442fc">
+            <font>
+                <Font size="38.0" />
+            </font>
+        </Label>
+        <Label layoutX="504.0" layoutY="88.0" text="Fatura ID" />
+        <TextField fx:id="txtFaturaID" layoutX="568.0" layoutY="84.0" prefHeight="25.0" prefWidth="115.0" />
+        <TextField fx:id="txtHastaID" layoutX="379.0" layoutY="136.0" prefHeight="25.0" prefWidth="115.0" />
+        <TextField fx:id="txtKayitID" layoutX="569.0" layoutY="135.0" prefHeight="25.0" prefWidth="115.0" />
+        <TextField fx:id="txtFaturaTarihi" layoutX="788.0" layoutY="134.0" prefHeight="25.0" prefWidth="115.0" />
+        <TextField fx:id="txtToplamTutar" layoutX="379.0" layoutY="179.0" prefHeight="25.0" prefWidth="115.0" />
+        <TextField fx:id="txtOdemeDurumu" layoutX="619.0" layoutY="179.0" prefHeight="25.0" prefWidth="115.0" />
+        <TableView fx:id="tableView" layoutX="266.0" layoutY="300.0" prefHeight="277.0" prefWidth="762.0">
+            <columns>
+                <TableColumn fx:id="faturaID" prefWidth="100.0" text="Fatura ID" />
+                <TableColumn fx:id="hastaID" prefWidth="100.0" text="Hasta ID" />
+                <TableColumn fx:id="kayitID" prefWidth="100.0" text="Kayıt ID" />
+                <TableColumn fx:id="faturaTarihi" prefWidth="150.0" text="Fatura Tarihi" />
+                <TableColumn fx:id="toplamTutar" prefWidth="150.0" text="Toplam Tutar" />
+                <TableColumn fx:id="odemeDurumu" prefWidth="150.0" text="Ödeme Durumu" />
+            </columns>
+        </TableView>
+        <Label layoutX="304.0" layoutY="138.0" text="HastaID" />
+        <Label layoutX="304.0" layoutY="183.0" text="Toplam Tutar" />
+        <Label layoutX="519.0" layoutY="139.0" text="KayıtID" />
+        <Label layoutX="519.0" layoutY="180.0" text="Odeme Durumu" />
+        <Label layoutX="718.0" layoutY="138.0" text="Fatura Tarihi" />
+        <Button fx:id="ekle_button" layoutX="437.0" layoutY="243.0" mnemonicParsing="false" onAction="#faturaEkleButonu" prefHeight="25.0" prefWidth="77.0" stylesheets="@button.css" text="Ekle" textFill="WHITE" />
+        <Button fx:id="ara_button" layoutX="542.0" layoutY="243.0" mnemonicParsing="false" onAction="#faturaAraButonu" prefHeight="25.0" prefWidth="77.0" text="Ara" />
+        <Button fx:id="sil_button" layoutX="641.0" layoutY="243.0" mnemonicParsing="false" onAction="#faturaSilButonu" prefHeight="25.0" prefWidth="77.0" stylesheets="@btn_sil.css" text="Sil" textFill="WHITE" />
+        <Button fx:id="guncelle_button" layoutX="745.0" layoutY="243.0" mnemonicParsing="false" onAction="#faturaGuncelleButonu" prefHeight="25.0" prefWidth="77.0" stylesheets="@btn_guncelle.css" text="Güncelle" />
+    </children>
+</AnchorPane>

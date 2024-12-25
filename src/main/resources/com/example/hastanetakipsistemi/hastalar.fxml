@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="1057.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hastanetakipsistemi.HastalarController">
+   <children>
+      <AnchorPane prefHeight="599.0" prefWidth="230.0" style="-fx-background-color: #1442FC;">
+         <children>
+            <ImageView fitHeight="198.0" fitWidth="230.0">
+               <image>
+                  <Image url="@giris_reism.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="1.0" layoutY="274.0" text="Hastane" textFill="WHITE">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="337.0" prefHeight="55.0" prefWidth="214.0" text="TakipSistemi" textFill="WHITE">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label layoutX="287.0" layoutY="29.0" prefHeight="55.0" prefWidth="152.0" text="Hastalar" textFill="#1442fc">
+         <font>
+            <Font size="38.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtHastaID" layoutX="584.0" layoutY="57.0" prefHeight="25.0" prefWidth="115.0" />
+      <TextField fx:id="txtAd" layoutX="401.0" layoutY="109.0" prefHeight="25.0" prefWidth="115.0" />
+      <TextField fx:id="txtSoyad" layoutX="591.0" layoutY="108.0" prefHeight="25.0" prefWidth="115.0" />
+      <TextField fx:id="txtTCKimlikNo" layoutX="810.0" layoutY="107.0" prefHeight="25.0" prefWidth="115.0" />
+      <TextField fx:id="txtTelefon" layoutX="401.0" layoutY="197.0" prefHeight="25.0" prefWidth="115.0" />
+      <TextField fx:id="txtEPosta" layoutX="591.0" layoutY="196.0" prefHeight="25.0" prefWidth="115.0" />
+      <TextField fx:id="txtSigortaBilgisi" layoutX="809.0" layoutY="195.0" prefHeight="25.0" prefWidth="115.0" />
+      <TextField fx:id="txtDogumTarihi" layoutX="401.0" layoutY="152.0" prefHeight="25.0" prefWidth="115.0" />
+      <TextField fx:id="txtCinsiyet" layoutX="591.0" layoutY="151.0" prefHeight="25.0" prefWidth="115.0" />
+      <TextField fx:id="txtAdres" layoutX="810.0" layoutY="150.0" prefHeight="25.0" prefWidth="115.0" />
+      <TableView fx:id="tableView" layoutX="266.0" layoutY="300.0" prefHeight="277.0" prefWidth="762.0">
+         <columns>
+            <TableColumn fx:id="HastaID" text="Hasta ID" />
+            <TableColumn fx:id="Ad" text="Ad" />
+            <TableColumn fx:id="Soyad" text="Soyad" />
+            <TableColumn fx:id="TCKimlikNo" text="TCKimlik No" />
+            <TableColumn fx:id="DogumTarihi" text="Doğum Tarihi" />
+            <TableColumn fx:id="Cinsiyet" text="Cinsiyet" />
+            <TableColumn fx:id="Adres" text="Adres" />
+            <TableColumn fx:id="Telefon" text="Telefon" />
+            <TableColumn fx:id="EPosta" text="E-Posta" />
+            <TableColumn fx:id="SigortaBilgisi" text="Sigorta Bilgisi" />
+         </columns>
+      </TableView>
+
+      <Label layoutX="326.0" layoutY="111.0" text="Ad" />
+      <Label layoutX="326.0" layoutY="156.0" text="Doğum Tarih" />
+      <Label layoutX="326.0" layoutY="201.0" text="Telefon" />
+      <Label layoutX="541.0" layoutY="112.0" text="Soyad" />
+      <Label layoutX="541.0" layoutY="153.0" text="Cinsiyet" />
+      <Label layoutX="541.0" layoutY="200.0" text="Eposta" />
+      <Label layoutX="740.0" layoutY="111.0" text="TC Kimlik" />
+      <Label layoutX="740.0" layoutY="148.0" text="Adres" />
+      <Label layoutX="740.0" layoutY="200.0" text="Sigorta Bİlgi" />
+      <Button fx:id="ekle_button" layoutX="437.0" layoutY="243.0" mnemonicParsing="false" onAction="#hastaEkleButonu" prefHeight="25.0" prefWidth="77.0" stylesheets="@button.css" text="Ekle" textFill="WHITE" />
+      <Button fx:id="ara_button" layoutX="542.0" layoutY="243.0" mnemonicParsing="false" onAction="#hastaAraButonu" prefHeight="25.0" prefWidth="77.0" text="Ara" />
+      <Button fx:id="sil_button" layoutX="641.0" layoutY="243.0" mnemonicParsing="false" onAction="#hastaSilButonu" prefHeight="25.0" prefWidth="77.0" stylesheets="@btn_sil.css" text="Sil" textFill="WHITE" />
+      <Button fx:id="guncelle_button" layoutX="745.0" layoutY="243.0" mnemonicParsing="false" onAction="#hastaGuncelleButonu" prefHeight="25.0" prefWidth="77.0" stylesheets="@btn_guncelle.css" text="Güncelle" />
+      <Label layoutX="520.0" layoutY="61.0" text="Hasta ID" />
+   </children>
+</AnchorPane>
